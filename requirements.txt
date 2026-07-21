@@ -1,0 +1,11 @@
+torch
+torchvision
+streamlit
+opencv-python
+pillow
+numpy
+pyyaml
+requests
+pandas
+matplotlib
+seaborn

@@ -1,0 +1,78 @@
+weights: yolov5m.pt
+cfg: ''
+data: "G:\\\u684C\u9762\\\u6DF1\u5EA6\u5B66\u4E60\u9879\u76EE\\\u7B2C\u516D\u7EC4\
+  -\u57FA\u4E8EYOLOv5\u7684\u57CE\u5E02\u9053\u8DEF\u8F66\u8F86\u7C7B\u522B\u4E0E\u884C\
+  \u4EBA\u68C0\u6D4B\\\u9879\u76EE\u6E90\u4EE3\u7801\\\u914D\u7F6E\u6587\u4EF6\\traffic_data.yaml"
+hyp:
+  lr0: 0.01
+  lrf: 0.2
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  box: 0.05
+  cls: 0.5
+  cls_pw: 1.0
+  obj: 1.5
+  obj_pw: 1.5
+  iou_t: 0.2
+  anchor_t: 4.0
+  fl_gamma: 2.0
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 5.0
+  translate: 0.1
+  scale: 0.5
+  shear: 2.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0
+  copy_paste: 0.0
+epochs: 500
+batch_size: 16
+imgsz: 640
+rect: false
+resume: false
+nosave: false
+noval: false
+noautoanchor: false
+noplots: false
+evolve: null
+evolve_population: data\hyps
+resume_evolve: null
+bucket: ''
+cache: ram
+image_weights: false
+device: '0'
+multi_scale: true
+single_cls: false
+optimizer: SGD
+sync_bn: false
+workers: 2
+project: "G:\\\u684C\u9762\\\u6DF1\u5EA6\u5B66\u4E60\u9879\u76EE\\\u7B2C\u516D\u7EC4\
+  -\u57FA\u4E8EYOLOv5\u7684\u57CE\u5E02\u9053\u8DEF\u8F66\u8F86\u7C7B\u522B\u4E0E\u884C\
+  \u4EBA\u68C0\u6D4B\\\u9879\u76EE\u6E90\u4EE3\u7801"
+name: "\u6743\u91CD\u6587\u4EF6"
+exist_ok: true
+quad: false
+cos_lr: false
+label_smoothing: 0.0
+patience: 100
+freeze:
+- 0
+save_period: -1
+seed: 0
+local_rank: -1
+entity: null
+upload_dataset: false
+bbox_interval: -1
+artifact_alias: latest
+ndjson_console: false
+ndjson_file: false
+save_dir: "G:\\\u684C\u9762\\\u6DF1\u5EA6\u5B66\u4E60\u9879\u76EE\\\u7B2C\u516D\u7EC4\
+  -\u57FA\u4E8EYOLOv5\u7684\u57CE\u5E02\u9053\u8DEF\u8F66\u8F86\u7C7B\u522B\u4E0E\u884C\
+  \u4EBA\u68C0\u6D4B\\\u9879\u76EE\u6E90\u4EE3\u7801\\\u6743\u91CD\u6587\u4EF6"

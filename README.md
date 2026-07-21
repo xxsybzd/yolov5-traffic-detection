@@ -3,6 +3,15 @@
 本项目基于 **YOLOv5** 深度学习目标检测框架构建，针对城市交通场景下的 **小型汽车 (car)**、**大型车辆 (large_vehicle)**、**两轮车 (two_wheeler)** 及 **行人 (pedestrian)** 实现高效多目标精准识别与追踪。系统搭配 Streamlit 可视化 Web 界面，支持图片、视频及屏幕实时区域追踪。
 
 ---
+## 📦 完整数据集下载
+
+由于 GitHub 单文件与仓库体积限制，本仓库仅包含用于测试与展示的样例数据（位于 `1、traffic_dataset (样图)/`）。包含 **1,084 张** 交通场景全量图片及 YOLO 格式标注信息的完整数据集已上传至百度网盘：
+
+* **📥 下载链接**：[百度网盘 - 完整数据集 dataset_full.zip](https://pan.baidu.com/s/1h6t1uT0cfV2do7M4U-kLig?pwd=89vd)
+* **🔑 提取码**：`89vd`
+
+> **解压提示**：下载 `dataset_full.zip` 后解压，替换或解压至项目根目录下的 `1、traffic_dataset` 文件夹即可用于重新训练或大批量测试。
+## ⚠️ 路径配置说明
 
 ## 📷 系统实际运行效果图
 
@@ -36,15 +45,6 @@ yolov5-traffic-detection/
 ├── README.md                 # 项目说明文档
 └── requirements.txt          # 项目依赖库清单
 
-## 📦 完整数据集下载
-
-由于 GitHub 单文件与仓库体积限制，本仓库仅包含用于测试与展示的样例数据（位于 `1、traffic_dataset (样图)/`）。包含 **1,084 张** 交通场景全量图片及 YOLO 格式标注信息的完整数据集已上传至百度网盘：
-
-* **📥 下载链接**：[百度网盘 - 完整数据集 dataset_full.zip](https://pan.baidu.com/s/1h6t1uT0cfV2do7M4U-kLig?pwd=89vd)
-* **🔑 提取码**：`89vd`
-
-> **解压提示**：下载 `dataset_full.zip` 后解压，替换或解压至项目根目录下的 `1、traffic_dataset` 文件夹即可用于重新训练或大批量测试。
-## ⚠️ 路径配置说明
 
 由于本项目部分脚本与配置文件（如 `2、配置文件/traffic_data.yaml` 和 `3、训练脚本/web_test.py`）包含开发环境的本地绝对路径，**在他人机器上运行前请注意进行以下微调**：
 
@@ -77,3 +77,4 @@ python web_test.py
 streamlit run web_test.py
 ```
 启动后在浏览器打开 `http://localhost:8501` 即可开始使用。
+

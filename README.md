@@ -35,3 +35,37 @@ yolov5-traffic-detection/
 ├── LICENSE                   # 开源许可协议 (MIT)
 ├── README.md                 # 项目说明文档
 └── requirements.txt          # 项目依赖库清单
+
+## ⚠️ 路径配置说明
+
+由于本项目部分脚本与配置文件（如 `2、配置文件/traffic_data.yaml` 和 `3、训练脚本/web_test.py`）包含开发环境的本地绝对路径，**在他人机器上运行前请注意进行以下微调**：
+
+1. **修改数据集路径**：
+   打开 `2、配置文件/traffic_data.yaml`，将 `path` 修改为你本地项目解压后的绝对路径或相对路径：
+   ```yaml
+   path: G:/桌面/深度学习项目/.../1_traffic_dataset  # 改为你本地的实际路径
+   train: images/train
+   val: images/val
+   ```
+
+2. **修改权重文件/脚本加载路径**：
+   若在 `web_test.py` 中提示找不到模型权重或路径报错，请打开文件将开头的 `weights_path` 或 `project_root` 修改为你本地的实际存储路径。
+## 🛠️ 快速上手
+
+### 1. 克隆项目与安装依赖
+```bash
+git clone [https://github.com/xxsybzd/yolov5-traffic-detection.git](https://github.com/xxsybzd/yolov5-traffic-detection.git)
+cd yolov5-traffic-detection
+pip install -r requirements.txt
+```
+
+### 2. 启动系统 Web 界面
+切换至 `3、训练脚本` 目录，执行以下命令：
+```bash
+python web_test.py
+```
+或直接使用 Streamlit 命令行启动：
+```bash
+streamlit run web_test.py
+```
+启动后在浏览器打开 `http://localhost:8501` 即可开始使用。
